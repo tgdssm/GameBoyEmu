@@ -57,7 +57,7 @@ class CPURegisters {
         }
     }
     
-    var zFlag : Bool {
+    var zeroFlag : Bool {
         get{return F & 0b10000000 != 0}
         
         set {
@@ -69,7 +69,7 @@ class CPURegisters {
         }
     }
     
-    var cFlag : Bool {
+    var carryFlag : Bool {
         get{return F & 0b00010000 != 0}
         
         set {
@@ -81,4 +81,16 @@ class CPURegisters {
         }
     }
     
+    func reset() {
+        A = UInt8(0)
+        F = UInt8(0)
+        B = UInt8(0)
+        C = UInt8(0)
+        D = UInt8(0)
+        E = UInt8(0)
+        H = UInt8(0)
+        L = UInt8(0)
+        SP = UInt16(0)
+        PC = UInt16(0)
+    }
 }
