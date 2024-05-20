@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF16D0AA2BFBE86300A96ABB /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16D0A92BFBE86300A96ABB /* Timer.swift */; };
+		DF16D0AE2BFBFE6500A96ABB /* APU.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16D0AD2BFBFE6500A96ABB /* APU.swift */; };
+		DF16D0B02BFBFEB900A96ABB /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16D0AF2BFBFEB900A96ABB /* Input.swift */; };
+		DF16D0B22BFBFFC700A96ABB /* PPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16D0B12BFBFFC700A96ABB /* PPU.swift */; };
 		DF6AC1B82BF296AC005CA56F /* GameBoyEmuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AC1B72BF296AC005CA56F /* GameBoyEmuApp.swift */; };
 		DF6AC1BA2BF296AC005CA56F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AC1B92BF296AC005CA56F /* ContentView.swift */; };
 		DF6AC1BC2BF296AD005CA56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6AC1BB2BF296AD005CA56F /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF16D0A92BFBE86300A96ABB /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		DF16D0AD2BFBFE6500A96ABB /* APU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APU.swift; sourceTree = "<group>"; };
+		DF16D0AF2BFBFEB900A96ABB /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		DF16D0B12BFBFFC700A96ABB /* PPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPU.swift; sourceTree = "<group>"; };
 		DF6AC1B42BF296AC005CA56F /* GameBoyEmu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameBoyEmu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6AC1B72BF296AC005CA56F /* GameBoyEmuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoyEmuApp.swift; sourceTree = "<group>"; };
 		DF6AC1B92BF296AC005CA56F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +148,10 @@
 				DF6AC1E22BF298CF005CA56F /* CPURegisters.swift */,
 				DF6AC1E42BF3E454005CA56F /* CPU.swift */,
 				DF6AC1E62BF405E5005CA56F /* RAM.swift */,
+				DF16D0A92BFBE86300A96ABB /* Timer.swift */,
+				DF16D0AD2BFBFE6500A96ABB /* APU.swift */,
+				DF16D0AF2BFBFEB900A96ABB /* Input.swift */,
+				DF16D0B12BFBFFC700A96ABB /* PPU.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,9 +287,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6AC1E52BF3E454005CA56F /* CPU.swift in Sources */,
+				DF16D0B22BFBFFC700A96ABB /* PPU.swift in Sources */,
 				DF6AC1E32BF298CF005CA56F /* CPURegisters.swift in Sources */,
 				DF6AC1BA2BF296AC005CA56F /* ContentView.swift in Sources */,
+				DF16D0AE2BFBFE6500A96ABB /* APU.swift in Sources */,
+				DF16D0AA2BFBE86300A96ABB /* Timer.swift in Sources */,
 				DF6AC1E72BF405E5005CA56F /* RAM.swift in Sources */,
+				DF16D0B02BFBFEB900A96ABB /* Input.swift in Sources */,
 				DF6AC1B82BF296AC005CA56F /* GameBoyEmuApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

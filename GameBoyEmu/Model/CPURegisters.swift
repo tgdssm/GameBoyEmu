@@ -20,10 +20,8 @@ class CPURegisters {
     var PC: UInt16 = 0
     var SP: UInt16 = 0
     
-    
     var AF : UInt16 {
-        get {return UInt16(A) << 8 | UInt16(F)}
-        
+        get { return UInt16(A) << 8 | UInt16(F) }
         set {
             A = UInt8(newValue >> 8)
             F = UInt8(newValue & 0xFF)
@@ -31,8 +29,7 @@ class CPURegisters {
     }
     
     var BC : UInt16 {
-        get {return UInt16(B) << 8 | UInt16(C)}
-        
+        get { return UInt16(B) << 8 | UInt16(C) }
         set {
             B = UInt8(newValue >> 8)
             C = UInt8(newValue & 0xFF)
@@ -40,8 +37,7 @@ class CPURegisters {
     }
     
     var DE : UInt16 {
-        get {return UInt16(D) << 8 | UInt16(E)}
-        
+        get { return UInt16(D) << 8 | UInt16(E) }
         set {
             D = UInt8(newValue >> 8)
             E = UInt8(newValue & 0xFF)
@@ -49,17 +45,15 @@ class CPURegisters {
     }
     
     var HL : UInt16 {
-        get {return UInt16(H) << 8 | UInt16(L)}
-        
+        get { return UInt16(H) << 8 | UInt16(L) }
         set {
             H = UInt8(newValue >> 8)
             L = UInt8(newValue & 0xFF)
         }
     }
     
-    var zeroFlag : Bool {
-        get{return F & 0b10000000 != 0}
-        
+    var zeroFlag: Bool {
+        get { return F & 0b10000000 != 0 }
         set {
             if newValue {
                 F |= 0b10000000
@@ -69,9 +63,30 @@ class CPURegisters {
         }
     }
     
-    var carryFlag : Bool {
-        get{return F & 0b00010000 != 0}
-        
+    var negativeFlag: Bool {
+        get { return F & 0b01000000 != 0 }
+        set {
+            if newValue {
+                F |= 0b01000000
+            } else {
+                F &= ~0b01000000
+            }
+        }
+    }
+    
+    var halfCarryFlag: Bool {
+        get { return F & 0b00100000 != 0 }
+        set {
+            if newValue {
+                F |= 0b00100000
+            } else {
+                F &= ~0b00100000
+            }
+        }
+    }
+    
+    var carryFlag: Bool {
+        get { return F & 0b00010000 != 0 }
         set {
             if newValue {
                 F |= 0b00010000
